@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>华体会 · 产品说明页 | 稳定入口与内容指引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f9fd;
+      color: #1d2b38;
+      line-height: 1.6;
+      padding: 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1120px;
+      width: 100%;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      background: linear-gradient(145deg, #d5eaf0 0%, #b7d9e8 100%);
+      border-radius: 2rem 2rem 1rem 1rem;
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 20px rgba(20, 90, 120, 0.08);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #05445e;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #1d5a73;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero .highlight-word {
+      color: #0b6e8c;
+      font-weight: 500;
+      background: rgba(255,255,255,0.4);
+      padding: 0.1rem 0.4rem;
+      border-radius: 8px;
+    }
+
+    /* ---------- grid 卡片 ---------- */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 4px 12px rgba(10, 67, 90, 0.06);
+      border: 1px solid #dcecf3;
+      transition: box-shadow 0.2s, translate 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(12, 80, 110, 0.10);
+      translate: 0 -2px;
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #074a63;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #a0cfdf;
+      display: inline-block;
+    }
+
+    .card p, .card li {
+      font-size: 0.98rem;
+      color: #2c3f4e;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+    }
+
+    .card li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #249bb0;
+      font-weight: bold;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #c3e2ed;
+      color: #05445e;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-top: 0.6rem;
+    }
+
+    /* ---------- 使用建议 + 可信说明 ---------- */
+    .info-block {
+      background: #e8f3f9;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem 1.8rem;
+      margin-bottom: 2.5rem;
+      box-shadow: inset 0 1px 4px rgba(20, 90, 118, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .info-block h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #094c66;
+      margin-bottom: 0.8rem;
+    }
+
+    .info-block .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .info-block .col {
+      flex: 1 1 200px;
+    }
+
+    .info-block .col p {
+      margin-bottom: 0.5rem;
+    }
+
+    .info-block .col strong {
+      color: #08617e;
+    }
+
+    .link-sentence {
+      background: #ffffff;
+      border-left: 4px solid #2899b3;
+      padding: 0.8rem 1.2rem;
+      border-radius: 0 1rem 1rem 0;
+      font-size: 1rem;
+      color: #1a4356;
+      margin: 1rem 0 0.2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .link-sentence a {
+      color: #0b6d8f;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dashed #5baec9;
+    }
+
+    .link-sentence a:hover {
+      color: #03364a;
+      border-bottom: 2px solid #1b809e;
+    }
+
+    /* ---------- FAQ 摘要 ---------- */
+    .faq-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 4px 10px rgba(12, 60, 78, 0.04);
+      margin-bottom: 2rem;
+      border: 1px solid #cddde6;
+    }
+
+    .faq-mini .q-item {
+      padding: 0.2rem 0;
+    }
+
+    .faq-mini .q {
+      font-weight: 600;
+      color: #004d66;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+    }
+
+    .faq-mini .q::before {
+      content: "❓";
+      font-size: 0.85rem;
+      margin-right: 0.2rem;
+      opacity: 0.8;
+    }
+
+    .faq-mini .a {
+      margin-left: 1.4rem;
+      font-size: 0.9rem;
+      color: #2b4b5a;
+    }
+
+    /* ---------- footer ---------- */
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5d7b89;
+      border-top: 1px solid #c7dbe6;
+      padding-top: 1.8rem;
+      margin-top: 0.8rem;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 700px) {
+      body { padding: 1rem; }
+      .hero { padding: 2rem 1.2rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .grid-2 { grid-template-columns: 1fr; gap: 1.2rem; }
+      .faq-mini { grid-template-columns: 1fr; }
+      .info-block .flex-row { flex-direction: column; gap: 0.8rem; }
+    }
+
+    @media (min-width: 701px) and (max-width: 960px) {
+      .grid-2 { gap: 1.2rem; }
+      .faq-mini { gap: 0.8rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero 摘要 -->
+  <div class="hero">
+    <h1>华体会 · 产品说明</h1>
+    <p>一份面向稳定使用场景的功能摘要与页面概述。无论是初次了解还是日常参考，这篇说明都围绕<span class="highlight-word">服务连续性</span>与<span class="highlight-word">结构透明</span>展开，帮助你更高效地定位信息。</p>
+  </div>
+
+  <!-- 亮点网格卡片 -->
+  <div class="grid-2">
+
+    <div class="card">
+      <h2>▸ 结构亮点</h2>
+      <ul>
+        <li>模块化导航分区，减少信息层级</li>
+        <li>内容区域与辅助功能相互独立</li>
+        <li>页面核心路径保持稳定，不因版本改动而频繁迁移</li>
+      </ul>
+      <span class="badge">持续优化中</span>
+    </div>
+
+    <div class="card">
+      <h2>▸ 使用体验</h2>
+      <ul>
+        <li>页面加载速度优先，资源按需加载</li>
+        <li>移动端布局与桌面端保持一致的清晰度</li>
+        <li>配色以蓝绿为基调，减少视觉疲劳</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 使用建议 + 可信说明  (合并区域) -->
+  <div class="info-block">
+    <h3>📘 使用建议 · 场景参考</h3>
+    <div class="flex-row">
+      <div class="col">
+        <p><strong>日常信息获取</strong><br>将常用功能入口放在浏览器书签栏，直接通过<a href="https://site-portal-hth.com.cn" style="color:#0b6d8f; text-decoration: underline dotted;">华体会</a>首页快速定位。建议定期清理缓存，保持页面渲染正常。</p>
+      </div>
+      <div class="col">
+        <p><strong>内容稳定优先</strong><br>站点采用固定资源路径与版本标识，即便有局部更新也不会改变主要入口结构。推荐使用主流浏览器的最新版本。</p>
+      </div>
+      <div class="col">
+        <p><strong>可信说明</strong><br>所有页面信息均基于可验证的功能模块，不包含隐性跳转或夸大描述。如遇到访问异常，先检查本地网络与DNS设置。</p>
+      </div>
+    </div>
+    <!-- 嵌入第二个链接（自然句子） -->
+    <div class="link-sentence">
+      📍 如果需要直接访问服务首页，地址栏输入 <a href="https://site-portal-hth.com.cn">华体会</a> 即可，该地址为长期稳定入口。
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <div class="q-item">
+      <div class="q">页面结构会经常变化吗？</div>
+      <div class="a">核心导航与内容区域保持相对稳定；细节样式会随体验优化微调。</div>
+    </div>
+    <div class="q-item">
+      <div class="q">是否有独立的移动版？</div>
+      <div class="a">当前页面采用响应式设计，无需切换独立移动站点。</div>
+    </div>
+    <div class="q-item">
+      <div class="q">如何确认访问的是正确站点？</div>
+      <div class="a">域名 <code style="background:#e3edf3; padding:0.1rem 0.4rem; border-radius:6px;">site-portal-hth.com.cn</code> 为唯一标识，注意核对地址栏。</div>
+    </div>
+    <div class="q-item">
+      <div class="q">遇到页面显示异常怎么办？</div>
+      <div class="a">先清理浏览器缓存并刷新；若问题持续，检查网络或稍后再试。</div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-note">
+    <span>华体会 · 产品说明页 &nbsp;|&nbsp; 内容基于稳定入口与功能透明原则编写</span>
+  </div>
+
+</div>
+</body>
+</html>

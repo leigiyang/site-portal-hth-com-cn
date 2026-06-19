@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leigiyang.github.io/site-portal-hth-com-cn/sitemap.xml
