@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再次相遇 · 澳洲幸运10 · 日常记录</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fce4b8 0%, #f7d39a 50%, #efc48c 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.7;
+      color: #3b2e1f;
+    }
+
+    .card {
+      max-width: 780px;
+      width: 100%;
+      background: #fffcf6;
+      border-radius: 2.5rem;
+      padding: 2.8rem 2.5rem;
+      box-shadow: 0 12px 32px rgba(130, 80, 30, 0.12), 0 4px 12px rgba(0,0,0,0.03);
+      transition: box-shadow 0.2s;
+    }
+
+    @media (max-width: 550px) {
+      body { padding: 1.2rem 0.8rem; }
+      .card { padding: 2rem 1.5rem; border-radius: 2rem; }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #5a3f28;
+      margin-bottom: 0.2rem;
+      line-height: 1.2;
+      border-left: 6px solid #e5a76b;
+      padding-left: 1.2rem;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7f6242;
+      margin: 0.2rem 0 1.8rem 0;
+      padding-left: 1.8rem;
+      font-weight: 400;
+      border-bottom: 1px dashed #dcc7b0;
+      padding-bottom: 0.6rem;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      background: #f9f0e3;
+      padding: 1.2rem 1.6rem;
+      border-radius: 1.4rem;
+      margin-bottom: 1.8rem;
+      color: #4b3923;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .post p {
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+    }
+
+    .post .highlight-quote {
+      background: #fbeddc;
+      padding: 1.2rem 1.8rem;
+      border-radius: 1.6rem;
+      font-style: normal;
+      border-left: 5px solid #dba570;
+      margin: 1.6rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      font-weight: 450;
+    }
+
+    .post .highlight-quote::before {
+      content: "📌 ";
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #9a6b3f;
+      text-decoration: none;
+      font-weight: 500;
+      background: transparent;
+      padding: 0.08rem 0.2rem;
+      border-radius: 0.3rem;
+      transition: all 0.15s;
+      border-bottom: 1px solid #dbb68c;
+    }
+
+    a:hover {
+      background: #eedac3;
+      color: #5d3f28;
+      border-bottom-color: #9a6b3f;
+    }
+
+    .button-link {
+      display: inline-block;
+      background: #e9cfb2;
+      color: #4b341f;
+      padding: 0.55rem 1.6rem;
+      border-radius: 3rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      border: none;
+      box-shadow: 0 2px 6px rgba(120, 70, 20, 0.08);
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 0.2rem;
+      margin-bottom: 0.4rem;
+      border-bottom: none;
+    }
+
+    .button-link:hover {
+      background: #dbbc9a;
+      transform: scale(1.02);
+      color: #3a281a;
+      border-bottom: none;
+    }
+
+    .faq-mini {
+      margin-top: 2.2rem;
+      padding-top: 1.2rem;
+      border-top: 2px solid #eedbcb;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.8rem;
+      background: #f8efe5;
+      padding: 0.7rem 1.4rem;
+      border-radius: 2rem;
+      transition: background 0.1s;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      color: #5c412c;
+      padding: 0.2rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-mini summary::before {
+      content: "▸ ";
+      color: #b88b62;
+      font-size: 1.1rem;
+      margin-right: 0.4rem;
+    }
+
+    .faq-mini details[open] summary::before {
+      content: "▾ ";
+    }
+
+    .faq-mini .answer {
+      padding: 0.5rem 0 0.3rem 1.2rem;
+      color: #5f4a33;
+      font-size: 0.95rem;
+    }
+
+    .visit-footer {
+      margin-top: 2.2rem;
+      background: #f3e5d6;
+      padding: 1.2rem 1.6rem;
+      border-radius: 1.8rem;
+      text-align: center;
+      font-size: 1.05rem;
+      border: 1px solid #e1ccb7;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .visit-footer span {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e9d9c8;
+      margin: 1.6rem 0;
+    }
+
+    .fine-print {
+      font-size: 0.85rem;
+      color: #8c735b;
+      text-align: center;
+      margin-top: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>再次收藏 · 澳洲幸运10</h1>
+  <div class="subhead">一篇安静的博客 · 只为常回来看看</div>
+
+  <div class="intro">
+    不知道你是什么时候第一次注意到它的。有些页面，来过一次，就总想回来。<br>
+    每次打开<a href="https://apps-australialucky10.com" class="button-link" style="display:inline-block; padding:0.2rem 1rem; margin:0 0.2rem;">澳洲幸运10</a>，都像翻到一本熟悉的杂志。
+  </div>
+
+  <div class="post">
+    <p>其实很多时候，我们并不需要太多的惊喜。数字跳动之间，一组简单的记录，就能让人安静下来。这个网站就是那种——你不会天天惦记，但隔段时间就会想点开看看的存在。就像书架上某一本旧书，封面被翻得起了毛边，但每次打开都有一种安定的熟悉感。</p>
+
+    <p>我把它收藏在浏览器的书签栏里，夹在一堆工作链接中间。偶尔深夜或午后，点开，看看最近更新的内容。没有什么压力，也不需要登录或注册，只是单纯地浏览。这种感觉在如今浮躁的互联网里，反而显得珍贵。</p>
+
+    <div class="highlight-quote">
+      再次访问，是一种安静的确认 —— 有些东西还在，你也还在。
+    </div>
+
+    <p>页面上的信息排布得很舒服，不拥挤也不空旷。从数据到分享，每个部分都带着一种克制的设计感。没有弹窗，没有大 banner，甚至没有催促你做什么。这也是为什么我会持续关注它，甚至推荐给朋友。好的页面，不需要声嘶力竭。</p>
+
+    <p>如果你也曾经点开过 <a href="https://apps-australialucky10.com">澳洲幸运10</a>，并且觉得它有点意思，不妨把它留在收藏夹里。不需要每天都看，但偶尔回来，总会有新的视角。就像一本可以反复翻阅的笔记，每一页都有它自己的温度。</p>
+  </div>
+
+  <div class="faq-mini">
+    <details>
+      <summary>为什么值得持续关注？</summary>
+      <div class="answer">因为内容在自然地生长。没有喧哗的更新提醒，但每次回来都能看到新的整理和记录，节奏刚刚好。</div>
+    </details>
+    <details>
+      <summary>页面会变化很大吗？</summary>
+      <div class="answer">不会。它保持着自己的调性——暖色、清晰、轻松。变化都在细节里，就像老朋友换了件新衬衫。</div>
+    </details>
+    <details>
+      <summary>适合收藏在手机浏览器吗？</summary>
+      <div class="answer">当然。响应式做得不错，手机上看也很舒服，字体和间距都能适应小屏幕。</div>
+    </details>
+  </div>
+
+  <hr>
+
+  <div class="visit-footer">
+    <span>🔖</span> 收藏这一页，偶尔回来坐坐。<br>
+    直接保存链接：<a href="https://apps-australialucky10.com" style="font-weight:600; border-bottom:2px solid #dba570;">澳洲幸运10</a>
+  </div>
+
+  <div class="fine-print">
+    · 简单记录 · 不必常来，但来日方长 ·
+  </div>
+</div>
+</body>
+</html>
