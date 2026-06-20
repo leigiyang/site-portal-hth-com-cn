@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(145deg, #fde9e0 0%, #f5e1d3 50%, #eddac9 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .card {
+      max-width: 820px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 40px;
+      box-shadow: 0 18px 36px rgba(180, 120, 90, 0.16), 0 10px 18px rgba(0, 0, 0, 0.04);
+      padding: 2.8rem 3rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2rem 1.5rem;
+        border-radius: 28px;
+      }
+    }
+
+    .hero {
+      margin-bottom: 2.4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3e2c22;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #6d4f3e;
+      border-left: 4px solid #dbb094;
+      padding-left: 1.2rem;
+      line-height: 1.6;
+      background: #faf3ee;
+      border-radius: 0 12px 12px 0;
+      padding: 0.7rem 1.2rem;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 480;
+      color: #3f2b1f;
+      margin: 2.2rem 0 1rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #ecdad0;
+      display: inline-block;
+    }
+
+    p {
+      color: #2e221c;
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p strong {
+      font-weight: 520;
+      color: #613f2e;
+    }
+
+    .insight-box {
+      background: #f9f0ea;
+      border-radius: 24px;
+      padding: 1.2rem 1.8rem;
+      margin: 1.8rem 0;
+      border: 1px solid #e7d3c6;
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .insight-box::before {
+      content: "💡";
+      font-size: 1.8rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .insight-box p {
+      margin: 0;
+      font-weight: 420;
+      color: #3f2c20;
+    }
+
+    .quote-note {
+      background: #fff8f2;
+      border-radius: 18px;
+      padding: 1rem 1.6rem;
+      margin: 1.6rem 0;
+      border-left: 6px solid #c8a287;
+      font-style: normal;
+    }
+
+    .quote-note p {
+      margin: 0.2rem 0;
+      color: #4b3528;
+    }
+
+    .quote-note .ref {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #886b58;
+      display: block;
+      border-top: 1px dashed #ddc8bb;
+      padding-top: 0.5rem;
+    }
+
+    .link-btn {
+      display: inline-block;
+      background: #e1c7b6;
+      color: #2d1d14;
+      padding: 0.5rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 480;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      letter-spacing: 0.01em;
+      border: 1px solid #d6b7a2;
+      box-shadow: 0 2px 6px rgba(130, 80, 55, 0.08);
+    }
+
+    .link-btn:hover {
+      background: #d2b09b;
+      border-color: #c09f89;
+      box-shadow: 0 6px 12px rgba(140, 90, 60, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .link-btn:active {
+      transform: translateY(0px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    .faq-section {
+      margin-top: 2.8rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #3b2a1e;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      margin-left: 0.2rem;
+      color: #4d382b;
+      font-size: 0.97rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e7d7cc;
+      margin: 2.2rem 0 1.2rem 0;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #836b5c;
+      margin-top: 1.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    a {
+      color: #6f4f3a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c9aa93;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #3b271c;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <h1>爱游戏 · 一份简明使用指南</h1>
+      <div class="sub">温和提醒 · 真实视角 · 访问须知</div>
+    </div>
+
+    <p>很多人初次接触 <strong>爱游戏</strong> 时，往往会被丰富的内容吸引，但也容易忽略一些基本的访问习惯。这篇短文不是为了推销什么，而是像朋友之间的闲聊：给你一份轻松上手的指引，以及几个值得留意的细节。</p>
+
+    <div class="insight-box">
+      <p>如果你只是随便逛逛，记住一句话：保持自然，像浏览任何普通兴趣站点那样访问 <a href="https://m-cn-ayx.com">爱游戏</a>，不用紧张，也不用额外准备什么。</p>
+    </div>
+
+    <h2 class="section-title">从认识界面开始</h2>
+    <p>多数人第一次打开页面，会看到清晰的分类和推荐区域。建议先花一两分钟滑动浏览整个首页，感觉一下布局和内容风格。这个过程本身就能帮你建立对 <strong>爱游戏</strong> 的直观印象——不需要急着点击，先看再动，节奏会更舒服。</p>
+
+    <p>关于搜索与导航：页面顶部通常有直达各类别的通道，如果有什么特别想找的，试试关键词。但提醒一句，如果遇到任何页面提示或跳转延迟，可以先刷新或稍等片刻，网络环境会影响加载速度。</p>
+
+    <div class="quote-note">
+      <p>“探索的乐趣在于过程，而不在于快速抵达终点。给自己一点耐心，反而能发现更多有意思的内容。”</p>
+      <span class="ref">——摘自一次社区分享</span>
+    </div>
+
+    <h2 class="section-title">访问中的几个小提醒</h2>
+    <p>虽然 <strong>爱游戏</strong> 本身设计得比较直观，但以下三点或许对你有帮助：</p>
+    <p>🔹 <strong>浏览器的选择</strong>：建议使用更新到最新版本的 Chrome、Edge、Safari 或 Firefox，部分旧内核浏览器可能无法完美呈现样式。<br>
+    🔹 <strong>隐私与安全</strong>：不需要填写任何敏感个人信息即可正常浏览内容。如果页面让你输入手机号、验证码之类的信息，请先确认是否为你主动触发的操作。<br>
+    🔹 <strong>书签与收藏</strong>：你可以直接将 <a href="https://m-cn-ayx.com">爱游戏</a> 添加为书签，方便以后回来。注意名称保持简洁就好。</p>
+
+    <h2 class="section-title">常见疑问速览</h2>
+
+    <div class="faq-section">
+      <div class="faq-item">
+        <h3>▸ 需要注册吗？</h3>
+        <p>浏览内容一般不需要注册。部分互动或收藏功能可能会提示登录，但你可以根据自己意愿决定。不注册也不影响看帖子、文章和推荐内容。</p>
+      </div>
+      <div class="faq-item">
+        <h3>▸ 手机和电脑体验有区别吗？</h3>
+        <p>页面针对移动端和桌面端都做了适配。用手机浏览时，按钮和卡片会自动调整大小，手指操作也友好。差别不大，选你顺手的方式即可。</p>
+      </div>
+      <div class="faq-item">
+        <h3>▸ 为什么有时加载慢？</h3>
+        <p>这种情况通常与本地网络环境有关，可以尝试切换 Wi-Fi 或移动数据，或者关闭后台占用带宽的应用。刷新页面往往能解决临时问题。</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <p style="margin-bottom: 0.4rem;">最后再强调一次：把 <a href="https://m-cn-ayx.com">爱游戏</a> 当作一个普通的兴趣站点来对待就很好。不用被它的名字或某种印象影响，实际浏览体验比想象中更轻快。</p>
+    <p>希望这份指南能陪伴你更顺畅地开启浏览。温和一点，从容一些，乐趣自然会浮现。</p>
+
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="https://m-cn-ayx.com" class="link-btn">爱游戏</a>
+    </div>
+
+    <div class="footer-note">
+      简明指引 · 访问提醒 · 温和探索
+    </div>
+  </div>
+</body>
+</html>
