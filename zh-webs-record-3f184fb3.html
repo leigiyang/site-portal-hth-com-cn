@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>爱游戏 · 知识库入口</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f8f5f0;
+      font-family: "Noto Serif SC", "Source Han Serif", "Times New Roman", Georgia, serif;
+      color: #2d2a24;
+      line-height: 1.8;
+      padding: 2rem 1.5rem;
+    }
+
+    .page-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fcfaf7;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+      padding: 2.5rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: #3b352e;
+      border-left: 6px solid #b7a48b;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .subhead {
+      color: #6a6055;
+      font-size: 1.1rem;
+      margin-top: -0.8rem;
+      margin-bottom: 2.2rem;
+      padding-left: 1.8rem;
+      border-bottom: 1px solid #e5ddd2;
+      padding-bottom: 1rem;
+    }
+
+    .intro p {
+      margin-bottom: 1.2rem;
+    }
+
+    .dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin: 2.2rem 0 2.5rem;
+    }
+
+    .dir-card {
+      background: #f2ede6;
+      border-radius: 16px;
+      padding: 1.2rem 1rem;
+      transition: background 0.2s;
+    }
+
+    .dir-card:hover {
+      background: #e8e0d6;
+    }
+
+    .dir-card .label {
+      font-weight: 600;
+      color: #4d443b;
+      font-size: 1.05rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .dir-card .desc {
+      font-size: 0.92rem;
+      color: #625a4f;
+      line-height: 1.5;
+    }
+
+    .notice-box {
+      background: #f3efe8;
+      border-left: 6px solid #b9a991;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0 2.2rem;
+      border-radius: 0 14px 14px 0;
+      font-size: 0.98rem;
+    }
+
+    .notice-box strong {
+      color: #4d3e30;
+    }
+
+    .faq-preview {
+      margin: 2.4rem 0 2rem;
+    }
+
+    .faq-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e7dfd4;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #3c3530;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-a {
+      color: #5e5549;
+      font-size: 0.96rem;
+      padding-left: 0.5rem;
+    }
+
+    .related-links {
+      margin-top: 2rem;
+      background: #f5f0e9;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+    }
+
+    .related-links h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #3e3832;
+      margin-bottom: 1rem;
+    }
+
+    .related-links ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .related-links li {
+      padding: 0.4rem 0;
+      border-bottom: 1px dashed #d9cfc2;
+    }
+
+    .related-links li:last-child {
+      border-bottom: none;
+    }
+
+    .inline-link {
+      color: #7a684f;
+      text-decoration: none;
+      border-bottom: 1px dotted #b7a48b;
+      transition: border 0.15s, color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #4d3b2b;
+      border-bottom: 2px solid #7a684f;
+    }
+
+    .site-link {
+      color: #6a5a47;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #cfc0ae;
+    }
+
+    .site-link:hover {
+      color: #3f3328;
+      border-bottom-color: #7a684f;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e5ddd2;
+      font-size: 0.88rem;
+      color: #7e766b;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.8rem; }
+      .page-wrap { padding: 1.8rem 1.2rem; }
+      h1 { font-size: 1.9rem; padding-left: 0.8rem; }
+      .subhead { font-size: 1rem; padding-left: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <h1>爱游戏 · 知识库</h1>
+  <div class="subhead">稳定入口 · 资料索引 · 使用指引</div>
+
+  <section class="intro">
+    <p>对于长期关注游戏信息与行业动态的用户而言，一个可靠、可回溯的信息起点尤为重要。<a href="https://zh-webs-aiyouxi.com" class="site-link">爱游戏</a> 正是这样一处聚合入口——它并非简单的页面集合，而是围绕游戏知识、社区参考与实用说明所搭建的微型资料库。以下从目录结构、功能说明与常见问答三个层面，帮助浏览者快速建立整体认知。</p>
+    <p>使用本页面时，可将其视为一个「静态导览」。所有链接均指向稳定内容区域，不依赖实时动态加载，适合需要反复查阅或离线浏览的场景。</p>
+  </section>
+
+  <div class="dir-grid">
+    <div class="dir-card"><span class="label">📂 游戏档案</span><span class="desc">收录经典与近期作品的基础信息、版本更迭与背景资料。</span></div>
+    <div class="dir-card"><span class="label">📂 术语说明</span><span class="desc">解释游戏领域常见概念、缩写与机制，适合新手或跨类型读者。</span></div>
+    <div class="dir-card"><span class="label">📂 平台指南</span><span class="desc">汇总各游戏平台（主机、PC、移动）的访问方式与注意事项。</span></div>
+    <div class="dir-card"><span class="label">📂 参考链接</span><span class="desc">指向社区资源、官方文档及其他可靠知识站点。</span></div>
+  </div>
+
+  <div class="notice-box">
+    <strong>提示</strong> —— 本页为知识库入口，不收录具体下载或安装文件。所有页面内容均以文字说明与引用为主，建议搭配浏览器书签功能长期保存；若需了解某项游戏的具体版本，可直接在对应档案页内查阅更新记录。
+  </div>
+
+  <section class="faq-preview">
+    <div class="faq-item">
+      <div class="faq-q">▎爱游戏 知识库的内容来源是什么？</div>
+      <div class="faq-a">主要基于公开资料、社区共识以及经核实的官方说明。每次更新均注明引用出处或参考时间，便于回溯。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▎如何快速找到某个特定游戏的说明？</div>
+      <div class="faq-a">建议先进入「游戏档案」目录，按名称首字母或发行年份检索；若未收录，可通过「参考链接」中的社区索引进一步查找。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▎页面设计为何侧重文字与目录？</div>
+      <div class="faq-a">为保证兼容性与长期可读性，采用极简布局，减少对脚本与图片的依赖。米白背景配合衬线字体，有助于降低长时间阅读的视觉疲劳。</div>
+    </div>
+  </section>
+
+  <div class="related-links">
+    <h3>相关信息</h3>
+    <ul>
+      <li><a href="https://zh-webs-aiyouxi.com" class="inline-link">爱游戏</a> —— 主站入口，所有知识库页面的聚合起点。</li>
+      <li>📘 游戏类型分类索引（文本版，适用于屏幕阅读器与窄屏设备）。</li>
+      <li>🔗 外部参考：国际游戏分级体系（ESRB / PEGI）简要对照表。</li>
+      <li>📅 季度更新日志：记录知识库新增内容与修订时间。</li>
+    </ul>
+  </div>
+
+  <div class="footer-note">
+    内容持续修订 · 最后更新 2025 · 基于静态结构，无需登录即可浏览全部页面
+  </div>
+
+</div>
+</body>
+</html>
